@@ -7,6 +7,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.ComponentModel.DataAnnotations;
+
+
 namespace PreFundacion.Models
 {
     using System;
@@ -20,7 +23,8 @@ namespace PreFundacion.Models
         }
     
         public int IDTutor { get; set; }
-        public Nullable<int> CURP { get; set; }
+        [Required(ErrorMessage="Es de a ley")]
+        public string CURP { get; set; }
         public string Nombre { get; set; }
         public string ApellidoPaterno { get; set; }
         public string ApellidoMaterno { get; set; }
